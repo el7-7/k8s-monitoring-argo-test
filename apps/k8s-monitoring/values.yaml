@@ -21,6 +21,7 @@ clusterEvents:
   namespaces:
     - monitoring
     - org1-prod
+    - ingress-nginx
 
 podLogs:
   enabled: true
@@ -29,6 +30,7 @@ podLogs:
   namespaces:
     - monitoring
     - org1-prod
+    - ingress-nginx
 
 nodeLogs:
   enabled: false
