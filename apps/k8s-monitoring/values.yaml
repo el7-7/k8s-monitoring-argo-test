@@ -9,13 +9,13 @@ destinations:
 collectors:
   alloy-logs:
     enabled: true
+  alloy-metrics:
+    enabled: true
     alloy:
       mounts:
         varlog: false
       clustering:
         enabled: true
-  alloy-metrics:
-    enabled: true
 
 clusterEvents:
   enabled: true
