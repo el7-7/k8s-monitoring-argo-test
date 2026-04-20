@@ -6,9 +6,9 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://grafana.github.io/helm-charts
-    chart: k8s-monitoring
-    targetRevision: 4.0.2
+    repoURL: https://github.com/YOUR_ORG/YOUR_REPO
+    path: apps/k8s-monitoring
+    targetRevision: main
     helm:
       valueFiles:
         - values.yaml
