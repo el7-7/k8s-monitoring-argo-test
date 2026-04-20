@@ -1,0 +1,10 @@
+adminUser: admin
+adminPassword: adminadminadmin
+
+datasources:
+  datasources.yaml:
+    apiVersion: 1
+    datasources:
+      - name: Loki
+        type: loki
+        url: http://loki-gateway.monitoring.svc.cluster.local
