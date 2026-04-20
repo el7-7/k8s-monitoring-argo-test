@@ -1,0 +1,15 @@
+  persistentVolume:
+    enabled: true
+    statefulSetNameOverride: ""
+    accessModes:
+    - ReadWriteOnce
+
+    labels: {}
+    annotations: {}
+    mountPath: /data
+    size: 1Gi
+    storageClass: "local-storage"
+    volumeName: "prometheus-pv"
+    selector:
+      matchLabels:
+        app: prometheus
