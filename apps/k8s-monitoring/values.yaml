@@ -1,6 +1,6 @@
 ---
 cluster:
-  name: test-argo
+  name: kind-test-argo
 
 destinations:
   - name: loki
