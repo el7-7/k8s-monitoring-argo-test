@@ -7,11 +7,11 @@ spec:
   project: default
   source:
     - repoURL: https://grafana.github.io/helm-charts
-     chart: k8s-monitoring
-     targetRevision: 4.0.2
-     helm:
-       valueFiles:
-         - $values/apps/k8s-monitoring/values.yaml
+      chart: k8s-monitoring
+      targetRevision: 4.0.2
+      helm:
+        valueFiles:
+          - $values/apps/k8s-monitoring/values.yaml
     - repoURL: https://github.com/el7-7/k8s-monitoring-argo-test.git
       targetRevision: main
       ref: values
