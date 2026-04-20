@@ -11,7 +11,7 @@ spec:
       targetRevision: 10.5.15
       helm:
         valueFiles:
-          - values.yaml
+          - $values/apps/grafana/values.yaml
     - repoURL: https://github.com/el7-7/k8s-monitoring-argo-test.git
       targetRevision: main
       ref: values
