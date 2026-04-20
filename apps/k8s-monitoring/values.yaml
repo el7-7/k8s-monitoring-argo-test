@@ -9,13 +9,18 @@ destinations:
 collectors:
   alloy-logs:
     enabled: true
+
   alloy-metrics:
     enabled: true
-    alloy:
-      mounts:
-        varlog: false
-      clustering:
-        enabled: true
+
+metrics:
+  enabled: true
+  kubeStateMetrics:
+    enabled: true
+  nodeExporter:
+    enabled: true
+  podMetrics:
+    enabled: true
 
 clusterEvents:
   enabled: true
@@ -27,8 +32,8 @@ clusterEvents:
 
 podLogs:
   enabled: true
-  gatherMethod: kubernetesApi
   collector: alloy-logs
+  gatherMethod: kubernetesApi
   namespaces:
     - monitoring
     - org1-prod
