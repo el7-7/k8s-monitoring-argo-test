@@ -5,7 +5,7 @@ metadata:
   namespace: argocd
 spec:
   source:
-    repoURL: https://github.com/el7-7/k8s-monitoring-argo-test
+    repoURL: https://github.com/el7-7/k8s-monitoring-argo-test.git
     path: apps
     targetRevision: main
     directory:
