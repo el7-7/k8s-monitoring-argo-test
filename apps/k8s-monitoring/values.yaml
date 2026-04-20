@@ -15,7 +15,7 @@ collectors:
       clustering:
         enabled: true
   alloy-metrics:
-    enabled: false
+    enabled: true
 
 clusterEvents:
   enabled: true
