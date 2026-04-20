@@ -5,13 +5,16 @@ metadata:
   namespace: argocd
 spec:
   project: default
-  source:
-    repoURL: https://github.com/el7-7/k8s-monitoring-argo-test.git
-    path: apps/k8s-monitoring
-    targetRevision: main
-    helm:
-      valueFiles:
-        - values.yaml
+  sources:
+    - repoURL: https://github.com/el7-7/k8s-monitoring-argo-test.git
+      path: apps/k8s-monitoring
+      targetRevision: main
+      helm:
+        valueFiles:
+          - values.yaml
+    - repoURL: https://github.com/el7-7/k8s-monitoring-argo-test.git
+      targetRevision: main
+      ref: values
   destination:
     server: https://kubernetes.default.svc
     namespace: monitoring
