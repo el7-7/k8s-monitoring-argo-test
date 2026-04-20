@@ -1,6 +1,9 @@
 loki:
   auth_enabled: false
 
+  chunksCache:
+  enabled: false
+
   commonConfig:
     replication_factor: 1
 
