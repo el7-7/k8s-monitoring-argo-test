@@ -6,7 +6,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/YOUR_ORG/YOUR_REPO
+    repoURL: https://github.com/el7-7/k8s-monitoring-argo-test.git
     path: apps/k8s-monitoring
     targetRevision: main
     helm:
