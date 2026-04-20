@@ -15,6 +15,7 @@ collectors:
 
 metrics:
   enabled: true
+  collector: alloy-metrics
   kubeStateMetrics:
     enabled: true
   nodeExporter:
