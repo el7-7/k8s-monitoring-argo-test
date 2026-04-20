@@ -8,6 +8,8 @@ spec:
     repoURL: https://github.com/el7-7/k8s-monitoring-argo-test
     path: apps
     targetRevision: main
+    directory:
+      recurse: true
   destination:
     server: https://kubernetes.default.svc
     namespace: argocd
