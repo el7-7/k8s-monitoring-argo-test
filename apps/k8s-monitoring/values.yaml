@@ -23,6 +23,7 @@ clusterEvents:
     - org1-prod
     - ingress-nginx
     - argocd
+    - argocd-deploycancel-test
 
 podLogs:
   enabled: true
@@ -33,6 +34,7 @@ podLogs:
     - org1-prod
     - ingress-nginx
     - argocd
+    - argocd-deploycancel-test
 
 nodeLogs:
   enabled: false
