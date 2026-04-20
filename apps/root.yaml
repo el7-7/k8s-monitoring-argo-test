@@ -1,21 +1,17 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: k8s-monitoring
+  name: monitoring-stack
   namespace: argocd
 spec:
-  project: default
   source:
-    repoURL: https://grafana.github.io/helm-charts
-    chart: k8s-monitoring
-    targetRevision: 4.0.2
-    helm:
-      valueFiles:
-        - values.yaml
+    repoURL: https://github.com/YOUR_ORG/k8s-monitoring-gitops
+    path: apps
+    targetRevision: main
   destination:
     server: https://kubernetes.default.svc
-    namespace: meta
+    namespace: argocd
   syncPolicy:
     automated:
       prune: true
-      selfHeal: true
+      selfHeal: false
