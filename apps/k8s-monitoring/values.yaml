@@ -20,7 +20,7 @@ clusterEvents:
   collector: alloy-logs
   namespaces:
     - monitoring
-    - org1-prod
+    - org1
     - ingress-nginx
     - argocd
     - argocd-deploycancel-test
@@ -31,7 +31,7 @@ podLogs:
   collector: alloy-logs
   namespaces:
     - monitoring
-    - org1-prod
+    - org1
     - ingress-nginx
     - argocd
     - argocd-deploycancel-test
