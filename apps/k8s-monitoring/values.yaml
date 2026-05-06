@@ -6,7 +6,7 @@ destinations:
     type: loki
     url: http://loki-gateway.monitoring.svc.cluster.local/loki/api/v1/push
 
-collectorss:
+collectors:
   alloy-logs:
     enabled: true
     alloy:
