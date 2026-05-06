@@ -18,8 +18,8 @@ collectors:
 # ─────────────────────────────────────────────
 # 🆕 ADD THIS: webhook receiver for Argo CD
 # ─────────────────────────────────────────────
-alloy:
-  configMapa:
+alloys:
+  configMaps:
     content: |-
       loki.source.http "argocd_webhook" {
         http {
