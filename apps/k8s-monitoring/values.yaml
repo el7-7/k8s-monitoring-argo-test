@@ -15,9 +15,6 @@ collectors:
       clustering:
         enabled: true
 
-# ─────────────────────────────────────────────
-# 🆕 ADD THIS: webhook receiver for Argo CD
-# ─────────────────────────────────────────────
 alloys:
   configMaps:
     content: |-
