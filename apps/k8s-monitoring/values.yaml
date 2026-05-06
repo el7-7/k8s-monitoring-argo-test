@@ -49,7 +49,7 @@ alloys:
         forward_to = [loki.write.loki.receiver]
       }
 
-clusterEvents:
+clusterEventss:
   enabled: true
   collector: alloy-logs
   namespaces:
