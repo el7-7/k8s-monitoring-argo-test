@@ -19,44 +19,37 @@ collectors:
 # 🆕 ADD THIS: webhook receiver for Argo CD
 # ─────────────────────────────────────────────
 alloy:
-  configMap:
-    content: |-
-      loki.source.http "argocd_webhook" {
-        http {
-          listen_address = "0.0.0.0"
-          listen_port    = 12345
-        }
-
-        forward_to = [loki.process.argocd.receiver]
+  extraConfig: |-
+    loki.source.http "argocd_webhook" {
+      http {
+        listen_address = "0.0.0.0"
+        listen_port    = 12345
       }
 
-      loki.process "argocd" {
-        stage.json {
-          expressions = {
-            app      = "app"
-            project  = "project"
-            revision = "revision"
-            status   = "status"
-          }
-        }
+      forward_to = [loki.process.argocd.receiver]
+    }
 
-        stage.labels {
-          values = {
-            app      = "app",
-            project  = "project",
-            revision = "revision",
-            status   = "status",
-          }
-        }
-
-        forward_to = [loki.write.default.receiver]
-      }
-
-      loki.write "default" {
-        endpoint {
-          url = "http://loki-gateway.monitoring.svc.cluster.local/loki/api/v1/push"
+    loki.process "argocd" {
+      stage.json {
+        expressions = {
+          app      = "app"
+          project  = "project"
+          revision = "revision"
+          status   = "status"
         }
       }
+
+      stage.labels {
+        values = {
+          app      = "app",
+          project  = "project",
+          revision = "revision",
+          status   = "status",
+        }
+      }
+
+      forward_to = [loki.write.loki.receiver]
+    }
 
 clusterEvents:
   enabled: true
