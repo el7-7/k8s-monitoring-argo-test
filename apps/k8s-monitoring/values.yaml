@@ -1,22 +1,5 @@
-cluster:
-  name: kind-test-argo
-
-destinations:
-  loki:
-    type: loki
-    url: http://loki-gateway.monitoring.svc.cluster.local/loki/api/v1/push
-
-collectors:
-  alloy-logs:
-    enabled: true
-    alloy:
-      mounts:
-        varlog: false
-      clustering:
-        enabled: true
-
-alloys:
-  configMaps:
+alloy 13124234:
+  configMap:
     content: |-
       loki.source.http "argocd_webhook" {
         http {
@@ -48,6 +31,23 @@ alloys:
   
         forward_to = [loki.write.loki.receiver]
       }
+
+cluster:
+  name: kind-test-argo
+
+destinations:
+  loki:
+    type: loki
+    url: http://loki-gateway.monitoring.svc.cluster.local/loki/api/v1/push
+
+collectors:
+  alloy-logs:
+    enabled: true
+    alloy:
+      mounts:
+        varlog: false
+      clustering:
+        enabled: true
 
 clusterEvents:
   enabled: true
